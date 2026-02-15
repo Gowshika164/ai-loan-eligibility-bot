@@ -1,0 +1,16 @@
+{
+  "dataset_version": "1.0",
+  "dataset_type": "approval_thresholds",
+  "thresholds": {
+    "approve_if_probability_above": 70,
+    "review_if_probability_between": [
+      40,
+      70
+    ],
+    "reject_if_probability_below": 40
+  },
+  "enforcement_rules": {
+    "hardcoding_not_allowed": true,
+    "thresholds_must_be_read_from_dataset": true
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "dataset_version": "1.0",
+  "dataset_type": "lending_rules",
+  "age_limits": {
+    "min": 21,
+    "max": 60
+  },
+  "credit_score_bands": [
+    {
+      "band": "excellent",
+      "min_score": 750,
+      "max_score": null,
+      "risk_level": "low",
+      "decision": "approve"
+    },
+    {
+      "band": "good",
+      "min_score": 700,
+      "max_score": 749,
+      "risk_level": "medium",
+      "decision": "review"
+    },
+    {
+      "band": "acceptable",
+      "min_score": 650,
+      "max_score": 699,
+      "risk_level": "high",
+      "decision": "review"
+    },
+    {
+      "band": "reject",
+      "min_score": null,
+      "max_score": 649,
+      "risk_level": "very_high",
+      "decision": "reject"
+    }
+  ],
+  "emi_income_ratio": [
+    {
+      "category": "safe",
+      "threshold": 0.4,
+      "decision": "approve"
+    },
+    {
+      "category": "review",
+      "threshold": 0.5,
+      "decision": "manual_review"
+    },
+    {
+      "category": "reject",
+      "threshold": 0.6,
+      "decision": "reject"
+    }
+  ],
+  "loan_to_income_ratio": {
+    "personal": 15,
+    "education": 20,
+    "vehicle": 10,
+    "housing": 40
+  },
+  "enforcement_rules": {
+    "hardcoding_not_allowed": true,
+    "rules_must_be_read_from_dataset": true,
+    "future_extension_allowed": true
+  }
+}
